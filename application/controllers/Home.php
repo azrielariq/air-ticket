@@ -1,9 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
-	public function index()
+class Home extends CI_Controller
+{
+	
+	/*function __construct(argument)
 	{
-		$this->load->view('v_home');
+		# code...
+	}*/
+
+	public function index(){
+		$this->load->view('index');
 	}
 }
