@@ -8,16 +8,17 @@
 	<script src="<?php echo base_url('gudang/bootstrap/js/bootstrap.js'); ?>"></script>
 </head>
 <body>
-	<div id="header">
+	<!-- select data -->
+	<div id="select">
 		<div class="container">
 			<div class="row">
 				<table class="table table-hover table-bordered">
 					<caption>Rute Penerbangan</caption>
 					<thead>
 						<tr>
-							<th>Id</th>
-							<th>Depart Date</th>
+							<th>No</th>
 							<th>Depart Time</th>
+							<th>Arrival Time</th>
 							<th>Rute From</th>
 							<th>Rute To</th>
 							<th>Price</th>
@@ -27,8 +28,8 @@
 					<tbody>
 						<tr>
 							<td><?php echo $d['id']; ?></td>
-							<td><?php echo $d['depart_date']; ?></td>
 							<td><?php echo $d['depart_time']; ?></td>
+							<td><?php echo $d['arrival_time']; ?></td>
 							<td><?php echo $d['rute_from']; ?></td>
 							<td><?php echo $d['rute_to']; ?></td>
 							<td><?php echo $d['price']; ?></td>
@@ -36,6 +37,15 @@
 					</tbody>
 					<?php } ?>
 				</table>
+			</div>
+		</div>
+	</div>
+	<!-- end select data -->
+	<!-- insert data -->
+	<div id="insert">
+		<div class="container">
+			<div class="row">
+				<form action=""></form>
 			</div>
 		</div>
 	</div>

@@ -31,7 +31,7 @@
       margin-bottom: 30px;
   }  
   .jumbotron {
-      background-color: #f4511e;
+      background-color: #008080;
       color: #fff;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
@@ -43,11 +43,11 @@
       background-color: #f6f6f6;
   }
   .logo-small {
-      color: #f4511e;
+      color: #008080;
       font-size: 50px;
   }
   .logo {
-      color: #f4511e;
+      color: #008080;
       font-size: 200px;
   }
   .thumbnail {
@@ -62,13 +62,13 @@
   }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #f4511e;
+      color: #008080;
   }
   .carousel-indicators li {
-      border-color: #f4511e;
+      border-color: #008080;
   }
   .carousel-indicators li.active {
-      background-color: #f4511e;
+      background-color: #008080;
   }
   .item h4 {
       font-size: 19px;
@@ -81,7 +81,7 @@
       font-style: normal;
   }
   .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #008080; 
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -89,13 +89,13 @@
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
+      border: 1px solid #008080;
       background-color: #fff !important;
-      color: #f4511e;
+      color: #008080;
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #f4511e !important;
+      background-color: #008080 !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -115,12 +115,12 @@
   }
   .panel-footer .btn {
       margin: 15px 0;
-      background-color: #f4511e;
+      background-color: #008080;
       color: #fff;
   }
   .navbar {
       margin-bottom: 0;
-      background-color: #f4511e;
+      background-color: #008080;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -133,7 +133,7 @@
       color: #fff !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
+      color: #008080 !important;
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
@@ -143,7 +143,7 @@
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #f4511e;
+      color: #008080;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -200,15 +200,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Air Ticket</a>
+      <a class="navbar-brand" href="#myPage"><span class="glyphicon glyphicon-plane"></span> Air Ticket</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -217,24 +215,36 @@
 <div class="jumbotron text-center">
   <h1>Booking ticket</h1> 
   <p>We plan your trip, best available choice in the world</p> 
-  <form class="form-inline">
+  <form class="form-inline" action="<?php echo base_url() ?>index.php/search" method="GET">
     <div class="form-group">
-    	<input type="text" class="form-control" name="from" value="" placeholder="Depart From">
+      <select class="form-control" name="rute_from">
+        <option value="">Dari</option>
+        <option value="purwokerto">Purwokerto</option>
+      </select>
     </div>
     <div class="form-group">
-    	<input type="text" class="form-control" name="to" value="" placeholder="Depart To">
-    </div>
-    <div class="form-group">
-    	<input type="month" class="form-control" name="" value="" placeholder="Date">
-    </div>
-    <div class="form-group">
-    	<select class="form-control" title="Depart To">
-    		<option>1</option>
-    		<option>2</option>
-    		<option>3</option>
-    		<option>4</option>
-    		<option>5</option>
+    	<select class="form-control" name="rute_to" title="">
+    		<option value="">Ke</option>
+        <option value="jakarta">Jakarta</option>
+    		<option value="semarang">Semarang</option>
+    		<option value="bandung">Bandung</option>
+    		<option value="surabaya">Surabaya</option>
+        <option value="yogyakarta">Yogyakarta</option>
+    		<option value="jepara">Jepara</option>
     	</select>
+    </div>
+    <div class="form-group">
+      <input type="date" class="form-control" name="depart_time" value="" placeholder="">
+    </div>
+    <div class="form-group">
+      <select class="form-control" name="totalpassengers">
+        <option value="">Jumlah</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -247,7 +257,7 @@
       <h2>About Company Page</h2><br>
       <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <br><button class="btn btn-default btn-lg">Sign in</button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
@@ -255,7 +265,7 @@
   </div>
 </div>
 
-<div class="container-fluid bg-grey">
+<!-- <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-globe logo slideanim"></span>
@@ -267,10 +277,10 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
+<!-- <div id="services" class="container-fluid text-center bg-grey">
   <h2>SERVICES</h2>
   <h4>What we offer</h4>
   <br>
@@ -309,7 +319,7 @@
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Container (Portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center bg-grey">
@@ -318,23 +328,23 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <img src="<?php echo base_url('gudang/img/jogja.jpg') ?>" alt="Yogyakarta" width="400" height="300">
+        <p><strong>Yogyakarta</strong></p>
+        <p>Yogyakarta, setingkat provinsi di Indonesia</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
+        <img src="<?php echo base_url('gudang/img/jakarta.jpg') ?>" alt="Jakarta" width="400" height="300">
+        <p><strong>Jakarta</strong></p>
+        <p>Jakarta, ibu kota negara dan kota terbesar di Indonesia</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
+        <img src="<?php echo base_url('gudang/img/surabaya.jpg') ?>" alt="Surabaya" width="400" height="300">
+        <p><strong>Surabaya</strong></p>
+        <p>Surabaya, ibu kota Provinsi Jawa Timur</p>
       </div>
     </div>
   </div><br>
@@ -351,13 +361,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>"Perusahaan ini adalah yang terbaik. Saya sangat senang dengan hasilnya!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        <h4>"Satu kata... WOW!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>"Mungkinkah saya... lebih senang dengan perusahaan ini?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
       </div>
     </div>
 
@@ -383,18 +393,18 @@
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>Air Asia</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>B002</strong> Code</p>
+          <p><strong>80</strong> Seat quantity</p>
+          <p><strong>Purwokerto</strong> To</p>
+          <p><strong>Jakarta - Semarang - Bandung - Yogyakarta</strong></p>
+          <p>Maskapai penerbangan cepat, mudah, dan nyaman</p>
         </div>
         <div class="panel-footer">
           <h3>$19</h3>
-          <h4>per month</h4>
+          <h4>per ticket</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>      
@@ -402,18 +412,18 @@
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>Garuda Indonesia</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>A001</strong> Code</p>
+          <p><strong>90</strong> Seat quantity</p>
+          <p><strong>Purwokerto</strong> To</p>
+          <p><strong>Jakarta - Semarang - Bandung - Surabaya</strong></p>
+          <p>Maskapai penerbangan nomor .1 di Indonesia</p>
         </div>
         <div class="panel-footer">
           <h3>$29</h3>
-          <h4>per month</h4>
+          <h4>per ticket</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>      
@@ -421,18 +431,18 @@
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Premium</h1>
+          <h1>Lion Air</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><strong>B003</strong> Code</p>
+          <p><strong>80</strong> Seat Quantity</p>
+          <p><strong>Purwokerto</strong> To</p>
+          <p><strong>Jakarta - Semarang - Bandung</strong></p>
+          <p>Maskapai penerbangan berorientasi objek</p>
         </div>
         <div class="panel-footer">
           <h3>$49</h3>
-          <h4>per month</h4>
+          <h4>per ticket</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
       </div>      
@@ -441,7 +451,7 @@
 </div>
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<!-- <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -467,10 +477,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;width:100%;"></div>
+<!-- <div id="googleMap" style="height:400px;width:100%;"></div>
 <script>
 function myMap() {
 var myCenter = new google.maps.LatLng(41.878114, -87.629798);
@@ -480,7 +490,7 @@ var marker = new google.maps.Marker({position:myCenter});
 marker.setMap(map);
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp

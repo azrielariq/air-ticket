@@ -13,8 +13,8 @@ class Nyoba_m extends CI_Model
 	}*/
 
 	public function getRute(){
-		$data = $this->db->query("SELECT * FROM rute");
-		return $data->result_array();
+		$query = $this->db->get('rute');
+		return $query->result_array();
 	}
 
 	public function insertData(){
