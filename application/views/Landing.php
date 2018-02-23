@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Air Ticket</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<?php echo base_url('gudang/bootstrap/css/bootstrap.min.css'); ?>">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="<?php echo base_url('gudang/jquery/jquery.min.js'); ?>"></script>
-  <script src="<?php echo base_url('gudang/bootstrap/js/bootstrap.min.js'); ?>"></script>
+<!-- Theme Made By www.w3schools.com - No Copyright -->
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -118,28 +107,6 @@
       background-color: #008080;
       color: #fff;
   }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #008080;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #008080 !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
@@ -189,29 +156,7 @@
     }
   }
   </style>
-</head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage"><span class="glyphicon glyphicon-plane"></span> Air Ticket</a>
-    </div>
-    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <div class="jumbotron text-center">
   <h1>Booking ticket</h1> 
   <p>We plan your trip, best available choice in the world</p> 
@@ -539,6 +484,3 @@ $(document).ready(function(){
   });
 })
 </script>
-
-</body>
-</html>

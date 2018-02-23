@@ -31,7 +31,9 @@ class Search extends CI_Controller
 				echo "Rute tidak ditemukan";
 			} else {
 				$v_data['data'] = $search;
+				$this->load->view('template/header1_v');
 				$this->load->view('search_result', $v_data);
+				$this->load->view('template/footer_v');
 			}
 		} 
 		else {

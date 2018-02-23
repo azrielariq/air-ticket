@@ -15,7 +15,7 @@
 	<!-- jquery -->
 	<script src="<?php echo base_url('gudang/jquery/jquery.min.js'); ?>"></script>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body>
 	<header>
 		<div id="header">
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -30,9 +30,9 @@
 					</div>
 					<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 						<ul class="nav navbar-nav">
+							<li><a href="#portfolio">HOME</a></li>
 							<li><a href="#about">ABOUT</a></li>
-							<li><a href="#portfolio">PORTFOLIO</a></li>
-							<li><a href="#pricing">PRICING</a></li>
+							<li><a href="#pricing">CONTACT</a></li>
 							<li><a href="#">LOGIN</a></li>
 						</ul>
 					</div>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="<?php echo base_url('gudang/bootstrap/css/bootstrap.min.css'); ?>">
-	<script src="<?php echo base_url('gudang/bootstrap/js/bootstrap.js'); ?>"></script>
-</head>
-<body>
-	<!-- select data -->
+<!-- select data -->
 	<div id="select">
 		<div class="container">
 			<div class="row">
@@ -40,14 +30,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- end select data -->
-	<!-- insert data -->
-	<div id="insert">
-		<div class="container">
-			<div class="row">
-				<form action=""></form>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+<!-- end select data -->
