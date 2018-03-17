@@ -1,0 +1,32 @@
+/* .edit-delete{
+    display: inline-block;
+} */
+.reservation-action{
+    font-weight: 600;
+    color: #4fc1e9;
+    cursor: pointer;
+}
+.skin-blue .main-header .navbar{
+    background-color:#008080;
+}
+.skin-blue .main-header .logo{
+    background-color:#008080;
+}
+.skin-blue .main-header .logo:hover{
+    color: #008080;
+    background-color: #fff;
+}
+.proof-of-payment-img{
+    display: block;
+    width: 55%;
+    margin: auto;
+    height: auto;
+}
+.setting-banner{
+    background-size: cover;
+    width: 350px;
+    height: 215px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #797979;
+}
